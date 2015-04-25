@@ -1,0 +1,175 @@
+<html>
+<head>
+    <title>
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="form">
+      <h1 id="pagetitle">NEW SHOW FORM</h1>
+        <form>
+            <div id="show-info">
+              <h3 class="section-headings"><u>GENERAL SHOW INFO</u></h3>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>City</th>
+                        <th>State</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" maxlength="10" placeholder="mm/dd/yyyy"></input></td>
+                        <td><input type="text" maxlength="100" placeholder="City"></input></td>
+                        <td><input type="text" maxlength="100" placeholder="State"></input></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Venue</th>
+                        <th>Promoter</th>
+                        <th>Capacity</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" maxlength="100" placeholder="Venue Name"></td>
+                        <td><input type="text" maxlength="100" placeholder="Promoter"></td>
+                        <td><input type="text" maxlength="100" placeholder="Venue Capacity"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Tix Price</th>
+                        <th>Tix Available</th>
+                        <th>Tix Sold</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" maxlength="20" placeholder="$0.00"></td>
+                        <td><input type="text" maxlength="20" placeholder="0"></td>
+                        <td><input type="text" maxlength="20" placeholder="0"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Comps/Guests</th>
+                        <th>Other Bands</th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" maxlength="20" placeholder="0"></th>
+                        <th><input type="text" maxlength="20" placeholder="Weezer, Queen, etc."></th>
+                    </tr>
+                </table>
+            </div>
+            
+
+
+            <div id="payouts">
+                <h3 class="section-headings"><u>PAYOUTS</u></h3>
+                <table>
+                    <tr>
+                        <th>Venue Cut</th>
+                        <th>Band Cut</th>
+                        <th>Promoter Cut</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" maxlength="10" placeholder="$0.00"></input></td>
+                        <td><input type="text" maxlength="10" placeholder="$0.00"></input></td>
+                        <td><input type="text" maxlength="10" placeholder="$0.00"></input></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Opener(s) Cut</th>
+                        <th>Total from Bar</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" maxlength="10" placeholder="$0.00"></input></td>
+                        <td><input type="text" maxlength="10" placeholder="$0.00"></input></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            
+            <div id="expenses">
+                <h3 class="section-headings"><u>EXPENSES</u></h3>
+                <table id="expense-table">
+                    <tr>
+                        <th></th>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Cost</th>
+                    </tr>
+                    <tr>
+                        <td class="numbers">1.</td>
+                        <td>
+                            <input class="expense" type="text" maxlength="100" placeholder="expense"></input>
+                        </td>
+                        <td>
+                          <select>
+                            <option value="fuel">Travel</option>
+                            <option value="lodging">Lodging</option>
+                            <option value="food">Food</option>
+                            <option value="promo">Promotion</option>
+                          </select>
+                        </td>
+                        <td>
+                            <input class="cost" type="text" maxlength="11" placeholder="$0.00"></input>
+                        </td>
+                        <td id="x">X</td>
+                    </tr>
+                    <tfoot>
+                        <th></th>
+                        <td id="add-another-merch" scope="row"><u>Add Another...</u></td>
+                    </tfoot>
+                </table>
+            </div>
+
+
+
+            <div id="merch">
+                <h3 class="section-headings"><u>MERCHANDISE</u></h3>
+                <table id="merch-table">
+                  <tr>
+                      <th></th>
+                      <th>Item</th>
+                      <th>Qty.</th>
+                  </tr>
+                  <tr>
+                      <td class="numbers">1.</td>
+                      <td>
+                        <select>
+                            <option value="crest-shirt">Crest Shirt - Beige</option>
+                            <option value="WNL-ladies">WNL ladies shirt - Maroon</option>
+                            <option value="WNL-Vinyl">We're Not Lost - Vinyl</option>
+                        </select>
+                      </td>
+                      <td>
+                        <input class="quantity" type="text" maxlength="11" placeholder="0"></input>
+                      </td>
+                      <td id="x">X</td>
+                  </tr>
+                  <tfoot>
+                      <th></th>
+                      <td id="add-another-item" scope="row"><u>Add Another...</u></td>
+                  </tfoot>  
+                </table>
+            </div><br>
+            <div id="btn">
+                  <strong>MAGIC</strong>
+            </div>
+            <div id="space"></div>
+        </form>
+    </div>
+
+<script>
+
+    $(document).ready(function() {
+        $("#add-another-item").click(function() {
+            $("<tr><td class=\"numbers\">2.</td><td><select><option value=\"crest-shirt\">Crest Shirt - Beige</option><option value=\"WNL-ladies\">WNL ladies shirt - Maroon</option><option value=\"WNL-Vinyl\">We're Not Lost - Vinyl</option></select></td><td><input class=\"quantity\" type=\"text\" maxlength=\"11\" placeholder=\"0\"></input></td><td id=\"x\">X</td></tr>").appendTo("#merch-table");
+        });
+        $("#add-another-merch").click(function() {
+            $("<tr><td class=\"numbers\">2.</td><td><input class=\"expense\" type=\"text\" maxlength=\"100\" placeholder=\"expense\"></input></td><td><select><option value=\"fuel\">Travel</option><option value=\"lodging\">Lodging</option><option value=\"food\">Food</option><option value=\"promo\">Promotion</option></select></td><td><input class=\"cost\" type=\"text\" maxlength=\"11\" placeholder=\"$0.00\"></input></td><td id=\"x\">X</td></tr>").appendTo("#expense-table");
+        });
+    });
+</script>
+</body>
+</html>
