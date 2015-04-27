@@ -1,0 +1,29 @@
+#kind, #apparel, #item-name, #cog, #retail {
+    background-color: #f15a24;
+    width: 500px;
+    height: 400px;
+    border:1px solid #ddd;
+}
+
+#apparel {
+    background-color: #c1272d;
+}
+
+#item-name {
+    background-color: #ed1e79;
+}
+
+#cog {
+    background-color: #f7931e;
+}
+
+.form-label {
+    color: white;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: lighter;
+    font-size: 2em;
+}
+
+#kind-drop {
+    width: 300px;
+}

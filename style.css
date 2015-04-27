@@ -1,0 +1,132 @@
+#page-title {
+    color: #444;
+    width: 465px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+#show-info {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:15px;
+    width:550px;
+    padding-left:23px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+#payouts, #merch, #expenses {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:50px;
+    width:550px;
+    padding-left:23px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid lightgray;
+
+}
+
+.section-headings {
+    padding-left: auto;
+    padding-right: auto;
+    color: deeppink;
+}
+
+.labels {
+    color:lightgray;
+}
+
+#city {
+    width: 350px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+#state {
+    display:inline-block;
+    width:144px;
+}
+
+#row2 {
+    display: inline-block;
+    width: 500px;
+}
+
+#row3 {
+    display: inline-block;
+    width:500px;
+}
+
+#promoter {
+    display: inline-block;
+    width: 350px;
+}
+
+#capacity {
+    display: inline-block;
+    width: 144px;
+}
+
+#row5 {
+    display: inline-block;
+    width: 164px;
+}
+
+#row6 {
+    display: inline-block;
+    width: 248px;
+}
+
+label {
+    font-family: arial;
+    font-weight: lighter;
+    color: gray;
+}
+
+#payout {
+    width: 500px;
+}
+
+#merch-item, #merch-item1 {
+    display: inline-block;
+    width: 275px;
+}
+
+#qty, #qty1 {
+    display: inline-block;
+    width: 144px;
+}
+
+#x, #xMerch, #xExpense {
+    display: inline-block;
+    width: 50px;
+    padding-bottom: 5px;
+}
+
+#expense, #expense1 {
+    display: inline-block;
+    width: 200px;
+}
+
+#category, #category1 {
+    display: inline-block;
+    width: 125px;
+}
+
+#cost, #cost1 {
+    display: inline-block;
+    width: 94px;
+}
+
+#add-item, #add-expense {
+    font-weight: bold;
+    font-size: small;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+table {
+    width: 500px;
+}
