@@ -6,13 +6,28 @@
 		Show Logger
 	</title>
 
+	<!--Magnific Popup CSS-->
+	<link rel="stylesheet" href="magnific-popup/magnific-popup.css"> 
+
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 	<!--jQuery-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <!--Magnific Popup JavaScript-->
+    <script src="magnific-popup/magnific-popup.js"></script>
+
+    <!--Main script source-->
     <script type="text/javascript" src="script.js"></script>
+
     <!--bootstrap-->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  	<meta http-equiv="Content-Script-Type" type="text/javascript">
+
   	<h1 id="page-title">N E W &nbsp;&nbsp;S H O W &nbsp;&nbsp;E N T R Y</h1>
+
+  	<meta http-equiv="Content-Script-Type" type="text/javascript">
 </head>
 <body>
 	<div id="form">
@@ -143,6 +158,10 @@
 				<div class="form-group" id="payout">
 					<label for="agent-cut">Booking Agent Fee (%)</label>
 					<input class="form-control input-lg" type="text" placeholder="0%">
+				</div><br>
+				<div class="form-group" id="payout">
+					<label for="event-tax">Event Tax (%)</label>
+					<input class="form-control input-lg" type="text" placeholder="0%">
 				</div>
 			</div>
 
@@ -171,6 +190,8 @@
 					</tr>
 				</table>
 				<input class="btn btn-default" id="add-new-item" type="button" value="Add Another"/>
+				<a class="popup-with-form" href="#test-form"><input class="btn btn-default" id="create-new-item" type="button" value="New Item"></a>
+				<!--<a class="popup-with-form" href="#test-form">New Item...</a>-->
 			</div>
 
 			<div id="expenses">
@@ -205,9 +226,81 @@
 				</table>
 				<input class="btn btn-default" id="add-new-expense" type="button" value="Add Another"/>
 			</div>
-			<input class="btn btn-default" id="submit" type="submit" type="buttom" value="go"/>
 
 		</form>
 	</div>
+
+	<form id="test-form" class="mfp-hide white-popup-block">
+		<h3 class="section-headings">Create New Item</h3>
+		<fieldset style="border:0;">
+			<ol>
+				<li>
+					<label for="type">What type of item is this?</label>
+					<select class="form-control input-lg" id="type">
+						<option value="nul"></option>
+						<option value="apparel">Apparel</option>
+						<option value="recording">Physical Recording</option>
+					</select>
+				</li><br>
+				<li>
+					<label for="kind">What kind of apparel is this?</label>
+					<select class="form-control input-lg">
+						<option value="nul"></option>
+						<option value="shirts">Shirt</option>
+						<option value="hoodie">Hoodie</option>
+						<option value="hat">Hat</option>
+						<option value="other">Other</option>
+					</select>
+				</li><br>
+				<li>
+					<label for="name">Give this item a memorable name.</label>
+					<input class="form-control input-lg" type="text" placeholder="e.g. Black Shirt" required>
+				</li><br>
+				<li>
+					<label for="cog">How much does it cost to <strong>make</strong> this item?</label>
+					<input class="form-control input-lg" type="text" placeholder="$0.00" required>
+				</li><br>
+				<li>
+					<label for="price">How much do you <strong>sell</strong> this item for?</label>
+					<input class="form-control input-lg" type="text" placeholder="$0.00" required>
+				</li><br>
+			</ol>
+			<input class="btn btn-default" id="finish-item" type="buttom" value="Finish Item"/><br>
+		</fieldset>
+	</form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
