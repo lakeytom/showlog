@@ -230,26 +230,22 @@
 		</form>
 	</div>
 
-	<form id="test-form" class="mfp-hide white-popup-block">
+	<form action="form-output.html" method="post" id="test-form" class="mfp-hide white-popup-block">
 		<h3 class="section-headings">Create New Item</h3>
 		<fieldset style="border:0;">
 			<ol>
 				<li>
 					<label for="type">What type of item is this?</label>
 					<select class="form-control input-lg" id="type">
-						<option value="nul"></option>
-						<option value="apparel">Apparel</option>
-						<option value="recording">Physical Recording</option>
-					</select>
-				</li><br>
-				<li>
-					<label for="kind">What kind of apparel is this?</label>
-					<select class="form-control input-lg">
-						<option value="nul"></option>
-						<option value="shirts">Shirt</option>
-						<option value="hoodie">Hoodie</option>
-						<option value="hat">Hat</option>
-						<option value="other">Other</option>
+						<optgroup label="Apparel">Apparel</optgroup>
+							<option value="shirt">Shirt</option>
+							<option value="hoodie">Hoodie</option>
+							<option value="hat">Hat</option>
+							<option value="other">Other</option>
+						<optgroup label="Music">Music</optgroup>
+							<option value="cd">Compact Disc</option>
+							<option value="vinyl">Vinyl Record</option>
+							<option value="dl-card">Download Card</option>
 					</select>
 				</li><br>
 				<li>
@@ -265,42 +261,8 @@
 					<input class="form-control input-lg" type="text" placeholder="$0.00" required>
 				</li><br>
 			</ol>
-			<input class="btn btn-default" id="finish-item" type="buttom" value="Finish Item"/><br>
+			<input class="btn btn-default" id="finish-item" type="buttom" value="Finish Item" href="form-output.html"/><br>
 		</fieldset>
 	</form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
