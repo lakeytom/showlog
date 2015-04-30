@@ -25,111 +25,123 @@
 
   	<meta http-equiv="Content-Script-Type" type="text/javascript">
 
-  	<h1 id="page-title">N E W &nbsp;&nbsp;S H O W &nbsp;&nbsp;E N T R Y</h1>
-  	
 </head>
 <body>
+	<div id="master-sheet">
+	    <table class="table table-hover" id="show-info-sheet">
+	      <tr>
+	        <th>DATE</th>
+	        <th>CITY</th>
+	        <th>STATE</th>
+	        <th>VENUE</th>
+	        <th>PROMOTER</th>
+	        <th>CAPACITY</th>
+	        <th>TICKET PRICE</th>
+	        <th>TICKETS SOLD</th>
+	        <th>TICKETS AVAILABLE</th>
+	        <th>COMPS/GUESTS</th>
+	      </tr>
+	    </table>
+  	</div>
+  	<h1 id="page-title">N E W &nbsp;&nbsp;S H O W &nbsp;&nbsp;E N T R Y</h1>
 	<div id="form">
-		<form>
+		<form id="form1" action="" method="get">
 
 			<div id="show-info">
 				<h3 class="section-headings">GENERAL SHOW INFO</h3>
-				<div class="form-group" id="city">
+				<div class="form-group" id="row3">
+					<label for="date">Date</label>
+					<input class="form-control input-lg" id="date" type="text" placeholder="MM/DD/YYYY" value="">
+				</div><br><br>
+				<div class="form-group" id="city_">
 					<label for="city">City</label>
-					<input class="form-control input-lg" id="labels" type="text" placeholder="City">
+					<input class="form-control input-lg" id="city" type="text" placeholder="City" value="">
 				</div>
-				<div class="form-group" id="state">
+				<div class="form-group" id="state_">
 					<label for="state">State</label>
-					<select class="form-control input-lg">
-						<option></option>
-						<option>AL</option>
-						<option>AK</option>
-						<option>AZ</option>
-						<option>AR</option>
-						<option>CA</option>
-						<option>CO</option>
-						<option>CT</option>
-						<option>DE</option>
-						<option>FL</option>
-						<option>GA</option>
-						<option>HI</option>
-						<option>ID</option>
-						<option>IL</option>
-						<option>IN</option>
-						<option>IA</option>
-						<option>KS</option>
-						<option>KY</option>
-						<option>LA</option>
-						<option>ME</option>
-						<option>MD</option>
-						<option>MA</option>
-						<option>MI</option>
-						<option>MN</option>
-						<option>MI</option>
-						<option>MO</option>
-						<option>MT</option>
-						<option>NE</option>
-						<option>NV</option>
-						<option>NH</option>
-						<option>NJ</option>
-						<option>NM</option>
-						<option>NY</option>
-						<option>NC</option>
-						<option>ND</option>
-						<option>OH</option>
-						<option>OK</option>
-						<option>OR</option>
-						<option>PA</option>
-						<option>RI</option>
-						<option>SC</option>
-						<option>SD</option>
-						<option>TN</option>
-						<option>TX</option>
-						<option>UT</option>
-						<option>VT</option>
-						<option>VA</option>
-						<option>WA</option>
-						<option>WV</option>
-						<option>WI</option>
-						<option>WY</option>
+					<select class="form-control input-lg" id="state">
+						<option value="select">- Select -</option>
+						<option value="Alabama">AL</option>
+						<option value="Alaska">AK</option>
+						<option value='Arizona'>AZ</option>
+						<option value='Arkansas'>AR</option>
+						<option value='California'>CA</option>
+						<option value='Colorado'>CO</option>
+						<option value='Conneticut'>CT</option>
+						<option value='Delaware'>DE</option>
+						<option value='Florida'>FL</option>
+						<option value='Georgia'>GA</option>
+						<option value='Hawaii'>HI</option>
+						<option value='Idaho'>ID</option>
+						<option value='Illinois'>IL</option>
+						<option value='Indiana'>IN</option>
+						<option value='Iowa'>IA</option>
+						<option value='Kansas'>KS</option>
+						<option value='Kentucky'>KY</option>
+						<option value='Louisiana'>LA</option>
+						<option value='Maine'>ME</option>
+						<option value='Maryland'>MD</option>
+						<option value='Massachusetts'>MA</option>
+						<option value='Michigan'>MI</option>
+						<option value='Minnesota'>MN</option>
+						<option value='Mississippi'>MI</option>
+						<option value='Missouri'>MO</option>
+						<option value='Montana'>MT</option>
+						<option value='Nebraska'>NE</option>
+						<option value='Nevada'>NV</option>
+						<option value='New Hampshire'>NH</option>
+						<option value='New Jersey'>NJ</option>
+						<option value='New Mexico'>NM</option>
+						<option value='New York'>NY</option>
+						<option value='North Carolina'>NC</option>
+						<option value='North Dakota'>ND</option>
+						<option value='Ohio'>OH</option>
+						<option value='Oklahoma'>OK</option>
+						<option value='Oregon'>OR</option>
+						<option value='Pennsylvania'>PA</option>
+						<option value='Rhode Island'>RI</option>
+						<option value='South Carolina'>SC</option>
+						<option value='South Dakota'>SD</option>
+						<option value='Tennessee'>TN</option>
+						<option value='Texas'>TX</option>
+						<option value='Utah'>UT</option>
+						<option value='Vermont'>VT</option>
+						<option value='Virginia'>VA</option>
+						<option value='Washington'>WA</option>
+						<option value='West Virginia'>WV</option>
+						<option value='Wisconsin'>WI</option>
+						<option value='Wyoming'>WY</option>
 					</select>
 				</div><br><br>
 				<div class="form-group"id="row2">
 					<label for="venue">Venue</label>
-					<input class="form-control input-lg" type="text" placeholder="Venue Name">
+					<input class="form-control input-lg" id="venue" type="text" placeholder="Venue Name" value="">
 				</div><br><br>
-				<div class="form-group" id="row3">
-					<label for="date">Date</label>
-					<input class="form-control input-lg" type="text" placeholder="MM/DD/YYYY">
-				</div><br><br>
-				<div class="form-group" id="promoter">
+				<div class="form-group" id="promoter_">
 					<label for="promoter">Promoter</label>
-					<input class="form-control input-lg" type="text" placeholder="Promoter">
+					<input class="form-control input-lg" id="promoter" type="text" placeholder="Promoter" value="">
 				</div>
-				<div class="form-group" id="capacity">
+				<div class="form-group" id="capacity_">
 					<label for="capacity">Capacity</label>
-					<input class="form-control input-lg" type="text" placeholder="0">
+					<input class="form-control input-lg" id="capacity" type="text" placeholder="0" value="">
 				</div><br><br>
 				<div class="form-group" id="row5">
 					<label for="capacity">Tix Price</label>
-					<input class="form-control input-lg" type="text" placeholder="$0.00">
+					<input class="form-control input-lg" id="tix-price" type="text" placeholder="$0.00" value="">
 				</div>
 				<div class="form-group" id="row5">
 					<label for="capacity">Tix Available</label>
-					<input class="form-control input-lg" type="text" placeholder="0">
+					<input class="form-control input-lg" id="tix-avail" type="text" placeholder="0" value="">
 				</div>
 				<div class="form-group" id="row5">
 					<label for="capacity">Tix Sold</label>
-					<input class="form-control input-lg" type="text" placeholder="0">
+					<input class="form-control input-lg" id="tix-sold" type="text" placeholder="0" value="">
 				</div><br><br>
 				<div class="form-group" id="row6">
 					<label for="comps/guests">Comps/Guests</label>
-					<input class="form-control input-lg" type="text" placeholder="Number of Comps/Guests">
+					<input class="form-control input-lg" id="comps" type="text" placeholder="Number of Comps/Guests" value="">
 				</div>
-				<div class="form-group" id="row6">
-					<label for="bands">Other Bands</label>
-					<input class="form-control input-lg" type="text" placeholder="Other Bands">
-				</div>
+				<input class="btn btn-default" id="submit-show-info" type="button" value="Math Time" onclick="callVal()">
 			</div>
 
 			<div id="payouts">
@@ -225,6 +237,8 @@
 				</table>
 				<input class="btn btn-default" id="add-new-expense" type="button" value="Add Another"/>
 			</div>
+
+			<input class="btn btn-default" id="submit" type="button" value="Math Time" onclick="myFunction()">
 
 		</form>
 	</div>
