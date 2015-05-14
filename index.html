@@ -27,39 +27,45 @@
 
 </head>
 <body>
-	<div id="master-sheet">
-	    <table class="table table-hover" id="show-info-sheet">
-	      <tr>
-	        <th>DATE</th>
-	        <th>CITY</th>
-	        <th>STATE</th>
-	        <th>VENUE</th>
-	        <th>PROMOTER</th>
-	        <th>CAPACITY</th>
-	        <th>TICKET PRICE</th>
-	        <th>TICKETS SOLD</th>
-	        <th>TICKETS AVAILABLE</th>
-	        <th>COMPS/GUESTS</th>
-	      </tr>
-	    </table>
-  	</div>
-  	<h1 id="page-title">N E W &nbsp;&nbsp;S H O W &nbsp;&nbsp;E N T R Y</h1>
+
+
+	<h1 id="page-title">N E W &nbsp;&nbsp;S H O W &nbsp;&nbsp;E N T R Y</h1>
+
+
 	<div id="form">
+
+
 		<form id="form1" action="" method="get">
 
+
 			<div id="show-info">
+
+
 				<h3 class="section-headings">GENERAL SHOW INFO</h3>
+
+
 				<div class="form-group" id="row3">
+
 					<label for="date">Date</label>
 					<input class="form-control input-lg" id="date" type="text" placeholder="MM/DD/YYYY" value="">
+
 				</div><br><br>
+
+
 				<div class="form-group" id="city_">
+
 					<label for="city">City</label>
 					<input class="form-control input-lg" id="city" type="text" placeholder="City" value="">
+
 				</div>
+
+
 				<div class="form-group" id="state_">
+
 					<label for="state">State</label>
+
 					<select class="form-control input-lg" id="state">
+
 						<option value="select">- Select -</option>
 						<option value="Alabama">AL</option>
 						<option value="Alaska">AK</option>
@@ -111,80 +117,144 @@
 						<option value='West Virginia'>WV</option>
 						<option value='Wisconsin'>WI</option>
 						<option value='Wyoming'>WY</option>
+
 					</select>
+
 				</div><br><br>
+
+
 				<div class="form-group"id="row2">
 					<label for="venue">Venue</label>
 					<input class="form-control input-lg" id="venue" type="text" placeholder="Venue Name" value="">
 				</div><br><br>
+
+
 				<div class="form-group" id="promoter_">
 					<label for="promoter">Promoter</label>
 					<input class="form-control input-lg" id="promoter" type="text" placeholder="Promoter" value="">
 				</div>
+
+
 				<div class="form-group" id="capacity_">
 					<label for="capacity">Capacity</label>
 					<input class="form-control input-lg" id="capacity" type="text" placeholder="0" value="">
 				</div><br><br>
+
+
 				<div class="form-group" id="row5">
 					<label for="capacity">Tix Price</label>
 					<input class="form-control input-lg" id="tix-price" type="text" placeholder="$0.00" value="">
 				</div>
+
+
 				<div class="form-group" id="row5">
 					<label for="capacity">Tix Available</label>
 					<input class="form-control input-lg" id="tix-avail" type="text" placeholder="0" value="">
 				</div>
+
+
 				<div class="form-group" id="row5">
 					<label for="capacity">Tix Sold</label>
 					<input class="form-control input-lg" id="tix-sold" type="text" placeholder="0" value="">
 				</div><br><br>
+
+
 				<div class="form-group" id="row6">
 					<label for="comps/guests">Comps/Guests</label>
 					<input class="form-control input-lg" id="comps" type="text" placeholder="Number of Comps/Guests" value="">
 				</div>
+
+
 				<input class="btn btn-default" id="submit-show-info" type="button" value="Math Time" onclick="callVal()">
+
+
 			</div>
 
+			
+
+
 			<div id="payouts">
+
+
 				<h3 class="section-headings">SHOW SETTLEMENT</h3><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="band-cut">Band Cut</label>
 					<input class="form-control input-lg" type="text" placeholder="$0.00">
 				</div><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="venue-cut">Venue Cut</label>
 					<input class="form-control input-lg" type="text" placeholder="$0.00">
 				</div><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="promoter-cut">Promoter Cut</label>
 					<input class="form-control input-lg" type="text" placeholder="$0.00">
 				</div><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="opener-cut">Opener(s) Cut</label>
 					<input class="form-control input-lg" type="text" placeholder="$0.00">
 				</div><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="bar-total">Total From Bar</label>
 					<input class="form-control input-lg" type="text" placeholder="$0.00">
 				</div><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="agent-cut">Booking Agent Fee (%)</label>
 					<input class="form-control input-lg" type="text" placeholder="0%">
 				</div><br>
+
+
 				<div class="form-group" id="payout">
 					<label for="event-tax">Event Tax (%)</label>
 					<input class="form-control input-lg" type="text" placeholder="0%">
 				</div>
+
+
 			</div>
 
+
+
+
 			<div id="merch">
+
+
 				<h3 class="section-headings">MERCH SETTLEMENT</h3><br>
+
+
 				<table id="merch-table">
 					<tr id="merch-row">
 						<td>
 							<div class="form-group" id="merch-item">
 								<label for="item">Item</label>
 								<select class="form-control input-lg">
-									<option value="new-item">New Item</option>
+										<option value="new-item">New Item</option>
+									<optgroup label='MUSIC'>
+										<option>WNL - CD</option>
+										<option>WNL - Vinyl</option>
+										<option>WNL - DL Card</option>
+										<option>HWA - CD</option>
+										<option>HWA - DL Card</option>
+										<option>RFYL - CD</option>
+										<option>RFYL - DL Card</option>
+									</optgroup>
+									<optgroup label='APPAREL'>
+										<option>WNL Shirt - Gray</option>
+										<option>WNL Shirt - Women</option>
+										<option>Crest Shirt</option>
+										<option>Flag Shirt</option>
+										<option>Pony Hat</option>
+									</optgroup>
 								</select>
 							</div>
 						</td>
@@ -200,13 +270,24 @@
 						</td>	
 					</tr>
 				</table>
+
+
 				<input class="btn btn-default" id="add-new-item" type="button" value="Add Another"/>
+
+
 				<a class="popup-with-form" href="#test-form"><input class="btn btn-default" id="create-new-item" type="button" value="New Item"></a>
 				<!--<a class="popup-with-form" href="#test-form">New Item...</a>-->
 			</div>
 
+
+
+
 			<div id="expenses">
+
+
 				<h3 class="section-headings">EXPENSES</h3><br>
+
+
 				<table id="expense-table">
 					<tr id="expense-row">
 						<td>
@@ -235,47 +316,128 @@
 						</td>
 					</tr>
 				</table>
+
+
 				<input class="btn btn-default" id="add-new-expense" type="button" value="Add Another"/>
+
+
 			</div>
 
-			<input class="btn btn-default" id="submit" type="button" value="Math Time" onclick="myFunction()">
+
 
 		</form>
+
+
 	</div>
 
+
+
+	<!--  Merch add form is hidden until "New Item" Button is clicked. -->
+
+
 	<form id="test-form" class="mfp-hide white-popup-block">
+
+
 		<h3 class="section-headings">Create New Item</h3>
+
+
 		<fieldset style="border:0;">
+
+
 			<ol>
+
+				
 				<li>
+
 					<label for="type">What type of item is this?</label>
-					<select class="form-control input-lg" id="type">
+
+					<select class="form-control input-lg" id="item-type">
+
 						<optgroup label="Apparel">Apparel</optgroup>
 							<option value="shirt">Shirt</option>
 							<option value="hoodie">Hoodie</option>
 							<option value="hat">Hat</option>
 							<option value="other">Other</option>
+
 						<optgroup label="Music">Music</optgroup>
 							<option value="cd">Compact Disc</option>
 							<option value="vinyl">Vinyl Record</option>
 							<option value="dl-card">Download Card</option>
+
 					</select>
+
 				</li><br>
+
+				
 				<li>
+
 					<label for="name">Give this item a memorable name.</label>
-					<input class="form-control input-lg" type="text" placeholder="e.g. Black Shirt" required>
+
+					<input class="form-control input-lg" id="item-name" type="text" placeholder="e.g. Black Shirt" required>
+
 				</li><br>
+
+
 				<li>
+
 					<label for="cog">How much does it cost to <strong>make</strong> this item?</label>
-					<input class="form-control input-lg" type="text" placeholder="$0.00" required>
+
+					<input class="form-control input-lg" id="cog" type="text" placeholder="$0.00" required>
+
 				</li><br>
+
+
 				<li>
+
 					<label for="price">How much do you <strong>sell</strong> this item for?</label>
-					<input class="form-control input-lg" type="text" placeholder="$0.00" required>
+
+					<input class="form-control input-lg" id="pog" type="text" placeholder="$0.00" required>
+
 				</li><br>
+
+
 			</ol>
-			<input class="btn btn-default" id="finish-item" type="buttom" value="Finish Item" href="form-output.html"/><br>
+
+
+			<input class="btn btn-default" id="finish-item" type="buttom" value="Finish Item" onClick='finishItem()'/><br>
+
+
 		</fieldset>
+
+
 	</form>
+
+
 </body>
 </html>
+
+
+
+
+
+<!-- Html for master sheet.  
+
+<div id="master-sheet">
+
+
+	    <table class="table table-hover" id="show-info-sheet">
+
+	      <tr>
+
+	        <th>DATE</th>
+	        <th>CITY</th>
+	        <th>STATE</th>
+	        <th>VENUE</th>
+	        <th>PROMOTER</th>
+	        <th>CAPACITY</th>
+	        <th>TICKET PRICE</th>
+	        <th>TICKETS SOLD</th>
+	        <th>TICKETS AVAILABLE</th>
+	        <th>COMPS/GUESTS</th>
+	        
+	      </tr>
+
+	    </table>
+
+
+  	</div>
