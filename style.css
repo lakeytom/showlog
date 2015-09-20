@@ -100,7 +100,7 @@ label {
     width: 144px;
 }
 
-#x, #xMerch, #xExpense {
+#x, #xExpense, .xMerch {
     display: inline-block;
     width: 50px;
     padding-bottom: 5px;

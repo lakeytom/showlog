@@ -14,15 +14,11 @@ $(document).ready(function() {
     $('#merch-table tbody').append(newMerchRow.html());
   });
 
-
-  $(document).on('click', '#xMerch', function () {
-
-    $('table#merch-table tr').eq(-1).fadeOut(300, function() {
-
-      $(this).remove();//still can't figure out how to make x's responsive to each row they are apart of.  This is the closest I've gotten but it still assumes that the user is going to remove rows from bottom row to top row, which won't always be the case.  In the event that the user wants to remove a middle row and clicks on an x in a middle row, the bottom row will still be removed.
-
+  $(document).on('click', '.xMerch', function (e) {
+    // select row by searching for the <tr> element that contains the actual .xMerch that was clicked
+    $(e.target).parents('tr').fadeOut(300, function() {
+      $(this).remove(); // remove the row after hiding it
     });
-
   });
 
   //code for adding new expenses
