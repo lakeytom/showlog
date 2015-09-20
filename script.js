@@ -14,7 +14,7 @@ $(document).ready(function() {
     $('#merch-table tbody').append(newMerchRow.html());
   });
 
-  $(document).on('click', '.xMerch', function (e) {
+  $(document).on('click', '.xMerch', function(e) {
     // select row by searching for the <tr> element that contains the actual .xMerch that was clicked
     $(e.target).parents('tr').fadeOut(300, function() {
       $(this).remove(); // remove the row after hiding it
