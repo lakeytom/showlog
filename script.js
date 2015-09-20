@@ -7,14 +7,11 @@ $(document).ready(function() {
 
   //code for adding new merch items
   $('#add-new-item').click(function() {
-
     counter = (counter+1) % uniqueId.length;
       // the modulus (%) operator resets the counter to 0
       // when it reaches the length of the array
 
-    var $newMerchRow = '<tr id="merch-row' + uniqueId[counter] + '" class="new-merch-row"><td><div class="form-group" id="merch-item"><select class="form-control input-lg"><option value="new-item">New Item</option><optgroup label="MUSIC"><option>WNL - CD</option><option>WNL - Vinyl</option><option>WNL - DL Card</option><option>HWA - CD</option><option>HWA - DL Card</option><option>RFYL - CD</option><option>RFYL - DL Card</option></optgroup><optgroup label="APPAREL"><option>WNL Shirt - Gray</option><option>WNL Shirt - Women</option><option>Crest Shirt</option><option>Flag Shirt</option><option>Pony Hat</option></select></div></td><td><div class="form-group" id="qty"><input class="form-control input-lg" type="text" placeholder="0"></div></td><td><div id="xs"><img src="images/x.svg" id="xMerch" height="20px" width="20px"/></div></td></tr>';
-
-    $($newMerchRow).fadeIn().appendTo('#merch-table');
+    $('#merch-table tbody').append($('<tr class="merch-row">').load('merch-row.html'));
   });
 
 

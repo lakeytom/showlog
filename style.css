@@ -141,3 +141,7 @@ table {
   position: relative;
 }
 
+.merch-row {
+    display: table-row;
+}
+
