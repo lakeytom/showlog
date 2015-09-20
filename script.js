@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var newMerchRow = $('<div>').load('merch-row.html'); // load new row once, and immediately
 
   var uniqueId = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
     counter = 0;
@@ -8,10 +9,9 @@ $(document).ready(function() {
   //code for adding new merch items
   $('#add-new-item').click(function() {
     counter = (counter+1) % uniqueId.length;
-      // the modulus (%) operator resets the counter to 0
-      // when it reaches the length of the array
-
-    $('#merch-table tbody').append($('<tr class="merch-row">').load('merch-row.html'));
+    // the modulus (%) operator resets the counter to 0
+    // when it reaches the length of the array
+    $('#merch-table tbody').append(newMerchRow.html());
   });
 
 
